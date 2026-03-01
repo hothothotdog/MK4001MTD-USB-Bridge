@@ -321,6 +321,8 @@ sudo dd if=/dev/sdX of=/dev/null bs=64k count=128 iflag=direct     # read
 sudo dd if=/dev/zero of=/dev/sdX bs=64k count=64 oflag=direct seek=1024  # write (offset past FS)
 ```
 
+Human notes here, fun fact: When it first starts to do speed testing, it actually dd directly to the drive and damage the filesystems..... Thankfully it doesn't matter that much here during the developments but always keep in mind when you handle OpenClaw your setup.
+
 ## License
 
 I don't care.
