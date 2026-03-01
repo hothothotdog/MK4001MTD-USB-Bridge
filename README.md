@@ -205,7 +205,65 @@ Human notes: Claude was wrong here because it didn’t realize that GP0 and GP1 
 
 HDD_PWR isn’t necessary. You don’t have to power-cycle the drive to use it; it’s more of a development convenience for resetting the HDD when a lot of things are hard-coded. That said, if you want power savings, you can use that signal, but it can handle warm reset without any issue.
 
-You’ll see debug messages over UART. They’re not going through USB-CDC because it was easier for Claude to set up a separate UART-to-USB logging link that doesn’t disconnect or become unstable during early development.
+You’ll see debug messages over UART. They’re not going through USB-CDC because it was easier for Claude to set up a separate UART-to-USB logging link that doesn’t disconnect or become unstable during early development.  
+Here is a example of the log:
+
+```
+========================================
+  MK4001MTD USB Bridge v0.9
+  SDIO-ATA ? USB Mass Storage
+========================================
+
+[MAIN] Power cycling HDD...
+[SDIO] HDD power OFF
+[SDIO] HDD power ON
+[MAIN] Starting SDIO init...
+[SDIO] Starting card init...
+[SDIO] CMD52: no response after 3 retries
+[SDIO] CMD7: no response after 3 retries
+[SDIO] CMD5 probe...
+[SDIO] Card ready (retry 0)
+[SDIO] CMD3...
+[SDIO] RCA=0x0001
+[SDIO] Switching to fast clock
+[SDIO] Card init complete!
+[MAIN] ATA IDENTIFY...
+[ATA] IDENTIFY complete
+Model:    [TOSHIBA MK4001MTD                       ]
+Serial:   [           763B008RA]
+Firmware: [VH173A  ]
+Sectors:  7862400 (3839 MB)
+SMART:    not supported (supported=0, enabled=0)
+IDENTIFY: W0=0040 W47=0000 W49=0000 W59=0000
+  ATA ver W80=0000  Cmd set W82=0000 W83=0000 W84=0000
+  Enabled W85=0000 W86=0000 W87=0000  W89=0008 W128=0001
+
+[DIAG] === Drive Diagnostics ===
+[DIAG] Standard SMART: not supported (IDENTIFY W82 bit0 = 0)
+[DIAG] Toshiba vendor CMD 0xC2:
+  FEAT=0x01 unknown_01                       ? SC=00 LBA=02/00/00 ST=50
+  FEAT=0x02 unknown_02                       ? SC=00 LBA=02/00/00 ST=50
+  FEAT=0x03 unknown_03                       ? SC=00 LBA=02/00/00 ST=50
+  FEAT=0x04 unknown_04                       ? SC=00 LBA=02/00/00 ST=50
+  FEAT=0x10 diag_10 (LBA_LO varies)          ? SC=00 LBA=00/00/00 ST=50
+  FEAT=0x11 diag_11                          ? SC=00 LBA=00/00/00 ST=50
+  FEAT=0x12 diag_12 (LBA_LO varies)          ? SC=00 LBA=01/00/00 ST=50
+  FEAT=0x20 query_20 (N91: SC=0xFF always)   ? SC=FF LBA=00/FF/00 ST=50
+  FEAT=0x21 query_21 (N91: SC varies per boot) ? SC=1B LBA=00/FF/00 ST=50
+
+[MAIN] MBR: valid 0x55AA
+[MAIN] Warming up drive...
+[MAIN] Drive ready.
+[MAIN] Switching to PIO SDIO...
+[PIO] Init OK: clkdiv=6.25 (~5.0 MHz), CMD@0
+[PIO] CMD52 OK: STATUS=0x50
+[MAIN] Drive has 7862400 sectors (3839 MB)
+[MAIN] Starting USB MSC...
+[MAIN] USB MSC active. Ready for host.
+[PWR] Idle 1000ms ? STANDBY
+[PWR] Wake from standby
+[PWR] Idle 1000ms ? STANDBY
+```
 
 Finally, here’s the wiring to the actual drive.  
 ![_DSC1176-2](https://github.com/user-attachments/assets/55c19b6a-03d5-4ee6-8c7b-da028ee14541)
