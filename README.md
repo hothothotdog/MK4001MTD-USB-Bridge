@@ -300,7 +300,7 @@ Here is a crop from the N91 schematic, you can map the pin number also.
 
 Side note that this is a 3V drive but I think 3.3V is fine, mostly it is to save some level shifting work.  
 
-I have a USB reader board working in progress, will update to the hardware folder once it is done.
+HW specifically designed for this drive is under /hardware!
 <img width="4796" height="2608" alt="image" src="https://github.com/user-attachments/assets/aec20183-9199-465c-9a98-3877b47dd1f7" />
 
 
