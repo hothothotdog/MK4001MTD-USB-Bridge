@@ -2,6 +2,8 @@
 
 **RP2040 Pico firmware that bridges a Toshiba MK4001MTD 0.85" SDIO microdrive as a USB Mass Storage device.**
 ![_DSC1170](https://github.com/user-attachments/assets/8fb591be-40f6-4506-b9c9-b852034268aa)
+![_DSC1354](https://github.com/will127534/will127534.github.io/blob/810b5bdf354a04aa85febfe0d7157505fb0c89c1/assets/images/MK4001MTD_reader/DSC1354.jpg)
+
 
 The MK4001MTD is a 4 GB Microdrive originally used in the Nokia N91 music phone and some other devices, like MP3 players or USB drives, back when flash storage was still quite expensive.
 
