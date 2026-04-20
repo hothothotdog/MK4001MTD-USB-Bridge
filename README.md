@@ -7,7 +7,7 @@ TLV62569DBV
 Leds
    Current limiters set to 1mA (plenty bright enough)
 Crystal 12MHz
-   Changed 27pf caps to correct capactience of 10pF each
+   Changed 27pf caps to correct capacitance of 10pF each
 NOR Flash
    Changed part from incorrect winbond chip to SIP32509DT-T1-GE3
    Package changed to the correct DFN 3x2mm 
