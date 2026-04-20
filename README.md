@@ -1,3 +1,5 @@
+Budget friendly changes to the PCB. Modified the PCB from 4-layers and 11cm long (about $70) to under 10cm and 2-layers which puts is in the $5 cost at JLC 
+
 # MK4001MTD USB Bridge
 
 **RP2040 Pico firmware that bridges a Toshiba MK4001MTD 0.85" SDIO microdrive as a USB Mass Storage device.**
