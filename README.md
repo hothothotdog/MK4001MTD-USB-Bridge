@@ -1,18 +1,18 @@
 Budget friendly changes to the PCB. Modified the PCB from 4-layers and 11cm long (about $70) to under 10cm and 2-layers which puts this in the $5 cost range at jlcpcb 
 
 Schematic changes:
-TLV62569DBV 
+   - TLV62569DBV 
    Filter caps changed to higher value (as per datasheet recommendation)
    Voltage divider changed from 112K 25.3K (3.2v out) to sensible values 270K 60K (3.33v out)
-Leds
+   - Leds
    Current limiters set to 1mA (plenty bright enough)
-Crystal 12MHz
+   - Crystal 12MHz
    Changed 27pf caps to correct capacitance of 10pF each
-NOR Flash
-   Changed part from incorrect winbond chip to SIP32509DT-T1-GE3
+   - NOR Flash
+   Changed part to correct winbond W25Q16JVUXIQ
    Package changed to the correct DFN 3x2mm 
 
-   new kicad files uploaded (27-4-2026)
+   new kicad files uploaded (27-4-2026) + ibom + images + pdf
    
 # MK4001MTD USB Bridge
 
