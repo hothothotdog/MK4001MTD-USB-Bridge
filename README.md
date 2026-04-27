@@ -12,7 +12,7 @@ NOR Flash
    Changed part from incorrect winbond chip to SIP32509DT-T1-GE3
    Package changed to the correct DFN 3x2mm 
 
-   new kicad files will be uploaded soon (21-4-2026)
+   new kicad files uploaded (27-4-2026)
    
 # MK4001MTD USB Bridge
 
