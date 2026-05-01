@@ -1,3 +1,15 @@
+
+This repository has moved to [https://codeberg.org/hothothotdog/MK4001MTD-USB-Bridge](https://codeberg.org/hothothotdog/MK4001MTD-USB-Bridge)
+
+This GitHub copy is a frozen archive. New commits, issues, and pull requests should go to Codeberg.
+
+---
+
+
+
+
+
+
 Budget friendly changes to the PCB. Modified the PCB from 4-layers and 11cm long (about $70) to under 10cm and 2-layers which puts this in the $5 cost range at jlcpcb 
 
 Schematic changes:
